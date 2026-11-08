@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Lines } from "@/components/ui/Lines";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TextLink } from "@/components/ui/TextLink";
 import { TRACKS, type TrackContent } from "@/content/landing";
 
@@ -9,7 +9,6 @@ function TrackCard({ track }: { track: TrackContent }) {
   return (
     <li className="flex flex-col overflow-hidden rounded-3xl border border-line bg-white">
       <div className={`relative h-[232px] ${track.tint}`}>
-        {/* Exported "Glass track artwork" (see ASSETS.md). */}
         <Image
           src={track.artwork.src}
           alt=""
@@ -56,4 +55,4 @@ export function TracksSection() {
       </Container>
     </section>
   );
-}
+} 

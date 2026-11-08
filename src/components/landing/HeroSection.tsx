@@ -45,9 +45,9 @@ export function HeroSection() {
           </div>
 
           <div className="flex items-center gap-2.5 text-sm leading-[18px] text-muted">
-            <span aria-hidden className="flex -space-x-[3px]">
+            <span aria-hidden className="flex -space-x-[3px]"> 
               {COMMUNITY_DOTS.map((color) => (
-                <span key={color} className={`size-4 rounded-full border-2 border-white ${color}`} />
+                <span key={color} className={`size-4 rounded-full border-2 border-white ${color}`} /> 
               ))}
             </span>
             Different backgrounds. A shared curiosity.
@@ -56,7 +56,7 @@ export function HeroSection() {
 
         {/* Exported artwork (node 14:16089). Includes the sticker and the "Built on curiosity" label. */}
         <Image
-          src="/images/hero-illustration.webp" 
+          src="/images/hero-ilustration.webp"        
           alt="Illustration of a magnifying glass and a code window made of glass tiles, with a note that reads “hello, possibilities_”"
           width={620}
           height={530}

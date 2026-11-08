@@ -102,4 +102,4 @@ export const FAQS = [
     question: "How can I find learning opportunities?",
     answer: "Keep an eye on @gdgoc.ugm for community updates. You can also use the contact page to ask about getting involved.",
   },
-];
+]; 
