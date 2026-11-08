@@ -6,7 +6,7 @@ Responsive implementation of two pages from the GDGoC UGM Figma design, consumin
 - **Landing** (`/`): hero, about, learning tracks, formats, project feature, journey, values, FAQ, CTA
 - **Contact** (`/contact`): inquiry categories, validated contact form, community updates, guidance
 
-Live demo: _add your Vercel URL_ · Video Presentation: https://drive.google.com/file/d/1IjiTi11XodnraLUmxfDt-UgjptOH1w2W/view?usp=sharing 
+Live demo: https://gdgoc-frontend-red.vercel.app/ · Video Presentation: https://drive.google.com/file/d/1IjiTi11XodnraLUmxfDt-UgjptOH1w2W/view?usp=sharing 
 
 ## Tech stack
 
