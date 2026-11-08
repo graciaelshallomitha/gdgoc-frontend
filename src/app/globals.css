@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Design tokens read directly from the Figma file (fills, strokes, type styles). */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Google Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #242424;
+  --color-muted: #5f6368;
+  --color-line: #dadce0;
+  --color-surface: #f1f3f4;
+
+  --color-primary: #4284f4; /* buttons */
+  --color-primary-hover: #3a77e0;
+  --color-link: #1967d2; /* links, active nav, accents */
+  --color-tint: #eaf2ff;
+  --color-warm: #fff7df;
+  --color-mint: #eaf5ed;
+  --color-blush: #fdedea;
+
+  --color-gdg-blue: #4284f4;
+  --color-gdg-red: #ea4335;
+  --color-gdg-yellow: #f9ab00;
+  --color-gdg-green: #34a853;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*
+ * Type scale from Figma (desktop value is the cap; smaller screens scale down).
+ * Letter-spacing is Figma's % of font size, written in em.
+ */
+@utility t-hero {
+  font-size: clamp(2.75rem, 1.2rem + 5.4vw, 5rem); /* 80 */
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+@utility t-title {
+  font-size: clamp(2.5rem, 1rem + 5vw, 4.5rem); /* 72 */
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+@utility t-h2 {
+  font-size: clamp(2rem, 1.3rem + 2.4vw, 3rem); /* 48 */
+  line-height: 1.12;
+  letter-spacing: -0.016em;
+  font-weight: 700;
+}
+@utility t-h2-44 {
+  font-size: clamp(1.875rem, 1.2rem + 2.2vw, 2.75rem); /* 44 */
+  line-height: 1.12;
+  letter-spacing: -0.016em;
+  font-weight: 700;
+}
+@utility t-h40 {
+  font-size: clamp(1.75rem, 1.1rem + 2vw, 2.5rem); /* 40 */
+  line-height: 1.12;
+  letter-spacing: -0.004em;
+  font-weight: 700;
+}
+@utility t-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.014em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  [id] {
+    scroll-margin-top: 7rem;
+  }
 }
